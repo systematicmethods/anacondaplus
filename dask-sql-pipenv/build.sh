@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-poetry run pytest
-
+pipenv run pytest
 stat=$?
 if [[ ${stat} == 0 ]]; then
   . ${SCRIPT_DIR}/env.sh

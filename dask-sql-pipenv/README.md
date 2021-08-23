@@ -39,8 +39,9 @@ right click on tests -> Run Python tests
 right click on main.py -> Run main.py
 
 # Docker Tests
+
 ```shell
-docker run -it --rm smr/dask-sql:0.3.9
+docker run -it --rm smr/dask-sql_env:0.3.9
 Hello World
 Hello from apackage 1
 Hello from subpackage 1
@@ -49,25 +50,25 @@ SubModuleClass anyAModClass_sub
 SubModuleClass anySubModuleClass
 ```
 
-````shell
-docker run -it --rm smr/dask-sql:0.3.9 poetry run python main.py
+```shell
+ocker run -it --rm smr/dask-sql_env:0.3.9 pipenv run python main.py
 Hello World
 Hello from apackage 1
 Hello from subpackage 1
 AModClass anyAModClass
 SubModuleClass anyAModClass_sub
 SubModuleClass anySubModuleClass
-````
-
-```shell
-docker run -it --rm smr/dask-sql:0.3.9 pipenv run python main.py
-docker: Error response from daemon: OCI runtime create failed: container_linux.go:367: starting container process caused: exec: "pipenv": executable file not found in $PATH: unknown.
 ```
 
 ```shell
-docker run -it --rm smr/dask-sql:0.3.9 python main.py
+docker run -it --rm smr/dask-sql_env:0.3.9 python main.py
 Traceback (most recent call last):
   File "main.py", line 2, in <module>
     import pymongo
 ModuleNotFoundError: No module named 'pymongo'
+```
+
+```shell
+docker run -it --rm smr/dask-sql_env:0.3.9 poetry run python main.py
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:367: starting container process caused: exec: "poetry": executable file not found in $PATH: unknown.
 ```

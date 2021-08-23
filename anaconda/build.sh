@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 IMAGE=continuumio/anaconda3
-SMIMAGE=sm/${IMAGE}
+SMIMAGE=sm/anaconda3
 VERSION=${1:-2021.05}
 
 
