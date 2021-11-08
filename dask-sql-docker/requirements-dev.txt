@@ -1,0 +1,6 @@
+
+pytest
+requests-mock
+pytest-bdd
+pytest-selenium=
+PyHamcrest=
